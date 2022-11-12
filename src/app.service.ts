@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
-import { HealthCheck } from './dto/health-check.dto';
+import { HealthCheckOutput } from './dto/health-check.output';
 
 @Injectable()
 export class AppService {
-  getHealthCheck(): HealthCheck {
-    return new HealthCheck('up');
+  getHealthCheck(): HealthCheckOutput {
+    return new HealthCheckOutput('up');
   }
 }

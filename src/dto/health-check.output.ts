@@ -1,4 +1,4 @@
-export class HealthCheck {
+export class HealthCheckOutput {
   constructor(status: string) {
     this.status = status;
   }
