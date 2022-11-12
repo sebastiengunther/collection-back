@@ -8,7 +8,9 @@ export class CollectionResolver {
   constructor(private readonly collectionService: CollectionService) {}
 
   @Mutation(() => Collection)
-  createCollection(@Args('createCollectionInput') createCollectionInput: CreateCollectionInput) {
+  createCollection(
+    @Args('createCollectionInput') createCollectionInput: CreateCollectionInput,
+  ) {
     return this.collectionService.create(createCollectionInput);
   }
 
