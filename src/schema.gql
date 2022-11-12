@@ -1,0 +1,73 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Collection {
+  _id: String!
+
+  """Collection created date"""
+  date: DateTime!
+
+  """Collection picture"""
+  file: String!
+
+  """Blockchain"""
+  blockchain: String!
+
+  """Protocol"""
+  protocol: String!
+
+  """Collection name"""
+  name: String!
+
+  """Collection symbol"""
+  symbol: String!
+
+  """Amount of NFTs in the collection"""
+  amount: String!
+
+  """Collection owner address"""
+  owner: String!
+
+  """Collection description"""
+  description: String!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Query {
+  getAllCollections: [Collection!]!
+}
+
+type Mutation {
+  createCollection(createCollectionInput: CreateCollectionInput!): Collection!
+}
+
+input CreateCollectionInput {
+  """Collection picture"""
+  file: String!
+
+  """Blockchain"""
+  blockchain: String!
+
+  """Protocol"""
+  protocol: String!
+
+  """Collection name"""
+  name: String!
+
+  """Collection symbol"""
+  symbol: String!
+
+  """Amount of NFTs in the collection"""
+  amount: String!
+
+  """Collection owner address"""
+  owner: String!
+
+  """Collection description"""
+  description: String!
+}
